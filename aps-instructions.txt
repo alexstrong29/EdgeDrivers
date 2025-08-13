@@ -1,0 +1,24 @@
+cd "E:\Repos\EdgeDrivers\personal-tuya-devices"
+
+make edits
+
+smartthings edge:drivers:package
+
+smartthings edge:channels
+
+smartthings edge:channels:assign 9ae493e5-5b72-4580-859c-4e53927c2c9d --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565
+
+//get the hub id
+smartthings devices
+//4caf3278-1091-42e6-a7d8-54c3bba85729
+
+
+
+smartthings edge:drivers:install --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565 --hub 4caf3278-1091-42e6-a7d8-54c3bba85729
+
+
+//Make edits
+smartthings edge:drivers:package
+smartthings edge:channels:assign 9ae493e5-5b72-4580-859c-4e53927c2c9d --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565
+smartthings edge:drivers:install --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565 --hub 4caf3278-1091-42e6-a7d8-54c3bba85729
+
