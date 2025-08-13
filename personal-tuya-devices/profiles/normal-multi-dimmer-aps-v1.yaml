@@ -1,28 +1,23 @@
 # https://developer.smartthings.com/docs/devices/device-profiles#categories
 # https://community.smartthings.com/t/change-icons-in-new-app/184190/25?u=w35l3y
-name: "switch-all-multi-dimmer-v2"
+name: "normal-multi-dimmer-aps-v1"
 components:
   - id: main
-    label: Dimmer All
+    label: Dimmer 1
     capabilities:
       - id: switch
         version: 1
       - id: switchLevel
+        version: 1
+      - id: valleyboard16460.datapointEnum
+        version: 1
+      - id: valleyboard16460.settings
         version: 1
       - id: signalStrength
         version: 1
       - id: refresh
         version: 1
       - id: valleyboard16460.debug
-        version: 1
-    categories:
-      - name: SmartPlug
-  - id: main01
-    label: Dimmer 1
-    capabilities:
-      - id: switch
-        version: 1
-      - id: switchLevel
         version: 1
     categories:
       - name: SmartPlug
@@ -33,6 +28,8 @@ components:
         version: 1
       - id: switchLevel
         version: 1
+      - id: valleyboard16460.datapointEnum
+        version: 1
     categories:
       - name: SmartPlug
   - id: main03
@@ -41,6 +38,8 @@ components:
       - id: switch
         version: 1
       - id: switchLevel
+        version: 1
+      - id: valleyboard16460.datapointEnum
         version: 1
     categories:
       - name: SmartPlug
@@ -52,11 +51,11 @@ preferences:
     preferenceType: enumeration
     definition:
       options:
-        normal_multi_dimmer_v2: Normal
+        normal_multi_dimmer_aps_v1: Normal
         switch_all_multi_dimmer_v2: +Dimmer All
         custom_multi_dimmer_v2: Custom
         generic_ef00_v1: Generic
-      default: switch_all_multi_dimmer_v2
+      default: normal_multi_dimmer_aps_v1
   - name: logLevel
     title: Log level
     required: true
@@ -68,14 +67,25 @@ preferences:
         info: Info, Warn, Error
         debug: Debug, Info, Warn, Error
       default: error
-  - name: childDimmerMain01
-    title: Create child device for Dimmer 1
+  - preferenceId: reverse
+    explicit: true
+  - name: rate
+    title: Rate
+    description: Set 0 to use default value
+    required: true
+    preferenceType: number
+    definition:
+      minimum: 0
+      maximum: 100000
+      default: 0
+  - name: childDimmerMain02
+    title: Create child device for Dimmer 2
     required: true
     preferenceType: boolean
     definition:
       default: false
-  - name: childDimmerMain02
-    title: Create child device for Dimmer 2
+  - name: childDimmerMain03
+    title: Create child device for Dimmer 3
     required: true
     preferenceType: boolean
     definition:
@@ -128,6 +138,24 @@ preferences:
   - name: dpSwitchLevelMain02
     title: DP for Switch Level 2
     description: Only if you want to override the default DataPoint
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 255
+      default: 0
+  - name: dpSwitchMain03
+    title: DP for Switch 3
+    description: APS Only if you want to override the default DataPoint
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 0
+      maximum: 255
+      default: 0
+  - name: dpSwitchLevelMain03
+    title: DP for Switch Level 3
+    description: APS Only if you want to override the default DataPoint
     required: true
     preferenceType: integer
     definition:

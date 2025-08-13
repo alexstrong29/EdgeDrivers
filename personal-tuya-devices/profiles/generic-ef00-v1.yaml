@@ -31,6 +31,7 @@ preferences:
         normal_switch_v1: 1 switch
         normal_multi_switch_v1: N switches (auto)
         normal_multi_dimmer_v2: 2 dimmers
+        normal_multi_dimmer_aps_v1: 3 dimmers
         normal_single_dimmer_v1: 1 dimmer
         normal_airQuality_v2: Air Quality
         normal_alarm_v1: Alarm
