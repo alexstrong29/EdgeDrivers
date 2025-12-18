@@ -291,6 +291,11 @@ zigbeeManufacturer:
     manufacturer: _TZE200_ztc6ggyl
     deviceProfileName: normal-presenceSensor-v1
     deviceLabel: Presence Sensor
+  - id: "_TZE284_81yrt3lo/TS0601"
+    deviceLabel: Energy Monitor Bi-directional PJ-2201 APS
+    manufacturer: _TZE284_81yrt3lo
+    model: TS0601
+    deviceProfileName: normal-powerMeter-v1
   - id: TS0601/_TZE204_ac0fhfiq
     model: TS0601
     manufacturer: _TZE204_ac0fhfiq
