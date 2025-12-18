@@ -57,6 +57,7 @@ preferences:
         _TZE200_lsanae15: _TZE200_lsanae15 (1,6)
         _TZE204_ac0fhfiq: _TZE204_ac0fhfiq (1,6)
         _TZE204_cjbofhxw: _TZE204_cjbofhxw (101,20,18,19)
+        _TZE284_81yrt3lo: _TZE284_81yrt3lo (101,20,18,19)
   - name: dpPowerMeterMain01
     title: DP for Power Meter A
     description: Only if you want to override the default DataPoint

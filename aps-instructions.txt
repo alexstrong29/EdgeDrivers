@@ -1,4 +1,5 @@
 cd "E:\Repos\EdgeDrivers\personal-tuya-devices"
+cd "E:\Repos\Edge-Drivers-Beta\zigbee-thermostat-moes"
 
 make edits
 
@@ -8,9 +9,18 @@ smartthings edge:channels
 
 smartthings edge:channels:assign 9ae493e5-5b72-4580-859c-4e53927c2c9d --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565
 
+smartthings edge:channels:assign 4fc48e6a-a69a-4498-8840-2479f5d34316 --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565 // Moes Star Thermostat
+
+
+or 
+this is the driver for the dimmer
+smartthings edge:channels:assign 210356f2-99e4-4386-96f0-27dbd0913ff7 --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565
+
 //get the hub id
 smartthings devices
 //4caf3278-1091-42e6-a7d8-54c3bba85729
+//Office Hub c50f49fa-fe5f-4088-b38e-8f77deb0452e
+smartthings edge:drivers:install --channel 2a0dce29-0ee2-4ada-b08a-9d225cb47565 --hub c50f49fa-fe5f-4088-b38e-8f77deb0452e
 
 
 
